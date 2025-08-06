@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kakkoi's wicked website</title>
+    <link rel="preload" href="./Perfect DOS VGA 437.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="./windows_command_prompt.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="./GrapeSoda.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: 'Perfect DOS VGA';
+            src: url('./Perfect DOS VGA 437.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Windows Command Prompt';
+            src: url('./windows_command_prompt.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Grape Soda';
+            src: url('./GrapeSoda.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Windows Command Prompt', monospace;
+            background-color: rgb(0, 100, 200);
+            color: #333;
+            padding-left: 6rem;
+            padding-right: 6rem;
+            background-image: url(./image-kakkoi.png);
+            background-repeat: repeat;
+            background-size: 100px;
+            cursor: url('./image-kakkoi.png'), auto;
+        }
+
+        h1 {
+            font-family: 'Grape Soda', cursive;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: white;
+            width: 90%;
+            background-color: rgba(0, 0, 0);
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        h2 {
+            font-family: 'Windows Command Prompt', monospace;
+        }
+
+        label, marquee {
+            font-family: 'Windows Command Prompt', monospace;
+        }
+
+        p {
+            font-family: 'Windows Command Prompt', monospace;
+            line-height: 1.6;
+        }
+
+        .slide-animation {
+            position: relative;
+            animation: slideLR 2s infinite alternate ease-in-out, rainbow 3s linear infinite;
+        }
+
+        @keyframes slideLR {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 40px;
+            }
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+
+            16% {
+                color: orange;
+            }
+
+            33% {
+                color: yellow;
+            }
+
+            50% {
+                color: green;
+            }
+
+            66% {
+                color: blue;
+            }
+
+            83% {
+                color: indigo;
+            }
+
+            100% {
+                color: violet;
+            }
+        }
+
+        .pop-animation {
+            animation: popGrow 4.2s infinite alternate cubic-bezier(.68, -0.55, .27, 1.55);
+            transform-origin: center center;
+        }
+
+        @keyframes popGrow {
+            0% {
+                transform: scale(1);
+            }
+
+            60% {
+                transform: scale(1.25);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <marquee style="color: yellow; background: black; font-size: 1.5em;">Donate to me!</marquee>
+
+    <h1 class="slide-animation">Kakkoi's wicked website</h1>
+    <div style="text-align: center; background-color: white; min-height: 100vh; padding-bottom: 1em;">
+        <p class="pop-animation"
+            style="color: #471313; font-size: 2.5em; font-weight: bold; text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff; padding: 1rem; border-radius: 12px; display: inline-block;">
+            Make a donation today!
+        </p>
+
+        <div style="text-align: center;">
+            <h2 style="color: red; text-shadow: 2px 2px 0px black; font-size: 2em;">
+                Donation Payment Form</h2>
+            <div
+                style="display: inline-block; text-align: left; background: linear-gradient(to right, #ff00ff, #00ffff); padding: 1rem; border: 3px solid black; width: 200px;  font-family: 'Windows Command Prompt';">
+                <label for="amount" style="color: black; font-size: 12px;">Donation Amount:</label><br>
+                <input type="text" id="amount" name="amount"
+                    style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
+
+                <hr>
+                <label for="name" style="color: black; font-size: 12px;">Name on Card:</label><br>
+                <input type="text" id="name" name="name" style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
+
+                <label for="card-number" style="color: black; font-size: 12px;">Card Number:</label><br>
+                <input type="text" id="card-number" name="card-number"
+                    style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
+
+                <label for="expiry" style="color: black; font-size: 12px;">Expiration Date:</label><br>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY"
+                    style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
+
+                <label for="cvv" style="color: black; font-size: 12px;">CVV:</label><br>
+                <input type="text" id="cvv" name="cvv" style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
+
+                <button type="button"
+                    style="background: black; color: yellow; font-size: 12px; padding: 0.5rem; border: 2px solid yellow; cursor: pointer;"
+                    onclick="triggerExplosion()">
+                    Submit Payment
+                </button>
+
+                <hr>
+                <p>Also make donation via:</p>
+                <div onclick="triggerExplosion()">
+                    <img src="./images.png" style="width: 25%; height: auto;">
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <marquee style="color: yellow; background: black; font-size: 1.5em;">Welcome to Kakkoi's Wicked Website!</marquee>
+    <!-- Made with ❤️ by Kenji -->
+
+    <script>
+        function triggerExplosion() {
+            document.body.innerHTML = '<div style="width: 100%; height: 100vh; "></div>';
+            document.body.style.backgroundImage = "url('./image.png')";
+            document.body.style.backgroundSize = "100% auto";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundColor = "rgb(255, 255, 255)";
+
+            setTimeout(() => {
+                const gunGif = document.createElement('img');
+                gunGif.src = 'https://kronington.com/kakkoi-gun.gif';
+                gunGif.style.position = 'absolute';
+                gunGif.style.top = '30%';
+                gunGif.style.left = '35%';
+                gunGif.style.width = '30%';
+                document.body.appendChild(gunGif);
+
+                setTimeout(() => {
+                    const explosionGif = document.createElement('img');
+                    explosionGif.src = 'https://media.tenor.com/URShj_JWaS8AAAAM/explos%C3%A3o-meme.gif';
+                    explosionGif.style.position = 'fixed';
+                    explosionGif.style.top = '0';
+                    explosionGif.style.left = '0';
+                    explosionGif.style.width = '100vw';
+                    explosionGif.style.height = '100vh';
+                    explosionGif.style.objectFit = 'cover';
+                    explosionGif.style.zIndex = '9999';
+                    document.body.appendChild(explosionGif);
+
+                    setTimeout(() => {
+                        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                    }, 2000);
+                }, 1000);
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
