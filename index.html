@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kakkoi's wicked website</title>
+    <title>Kakkoi's Wicked Website</title>
     <link rel="preload" href="./Perfect DOS VGA 437.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="./windows_command_prompt.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="./GrapeSoda.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -25,85 +25,56 @@
 
         body {
             font-family: 'Windows Command Prompt', monospace;
-            background-color: rgb(0, 100, 200);
-            color: #333;
-            padding-left: 6rem;
-            padding-right: 6rem;
+            background-color: #000080;
+            color: #ffffff;
             background-image: url(./image-kakkoi.png);
             background-repeat: repeat;
             background-size: 100px;
-            cursor: url('./image-kakkoi.png'), auto;
+            cursor: url('https://cur.cursors-4u.net/cursors/cur-13/cur1155.ani'), auto;
+            padding: 0;
+            margin: 0;
         }
 
         h1 {
-            font-family: 'Grape Soda', cursive;
+            font-family: 'Comic Sans MS', cursive;
             font-size: 3em;
             text-align: center;
             margin-bottom: 1rem;
-            color: white;
-            width: 90%;
-            background-color: rgba(0, 0, 0);
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
+            color: lime;
+            text-shadow: 2px 2px 4px black;
+            border: dashed 4px magenta;
+            padding: 1rem;
+            background-color: black;
         }
 
         h2 {
             font-family: 'Windows Command Prompt', monospace;
         }
 
-        label, marquee {
+        label, marquee, p {
             font-family: 'Windows Command Prompt', monospace;
         }
 
-        p {
-            font-family: 'Windows Command Prompt', monospace;
-            line-height: 1.6;
+        table {
+            margin: auto;
+            border: 3px solid cyan;
+            background: black;
+            color: white;
         }
 
-        .slide-animation {
-            position: relative;
-            animation: slideLR 2s infinite alternate ease-in-out, rainbow 3s linear infinite;
+        .sidebox {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            background: hotpink;
+            padding: 1em;
+            font-family: 'Comic Sans MS';
+            font-size: 14px;
+            z-index: 999;
         }
 
-        @keyframes slideLR {
-            0% {
-                left: 0;
-            }
-
-            100% {
-                left: 40px;
-            }
-        }
-
-        @keyframes rainbow {
-            0% {
-                color: red;
-            }
-
-            16% {
-                color: orange;
-            }
-
-            33% {
-                color: yellow;
-            }
-
-            50% {
-                color: green;
-            }
-
-            66% {
-                color: blue;
-            }
-
-            83% {
-                color: indigo;
-            }
-
-            100% {
-                color: violet;
-            }
+        .sidebox img {
+            width: 80px;
         }
 
         .pop-animation {
@@ -112,74 +83,61 @@
         }
 
         @keyframes popGrow {
-            0% {
-                transform: scale(1);
-            }
-
-            60% {
-                transform: scale(1.25);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            60% { transform: scale(1.25); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 
 <body>
+
     <marquee style="color: yellow; background: black; font-size: 1.5em;">Donate to me!</marquee>
 
-    <h1 class="slide-animation">Kakkoi's wicked website</h1>
-    <div style="text-align: center; background-color: white; min-height: 100vh; padding-bottom: 1em;">
-        <p>
-            style="color: #471313; font-size: 2.5em; font-weight: bold; text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff; padding: 1rem; border-radius: 12px; display: inline-block;">
-            Make a donation today!
-        </p>
-
-        <div style="text-align: center;">
-            <h2 style="color: red; text-shadow: 2px 2px 0px black; font-size: 2em;">
-                Donation Payment Form</h2>
-            <div
-                style="display: inline-block; text-align: left; background: linear-gradient(to right, #ff00ff, #00ffff); padding: 1rem; border: 3px solid black; width: 200px;  font-family: 'Windows Command Prompt';">
-                <label for="amount" style="color: black; font-size: 12px;">Donation Amount (it better be a lot!):</label><br>
-                <input type="text" id="amount" name="amount"
-                    style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
-
-                <hr>
-                <label for="name" style="color: black; font-size: 12px;">Name on Card:</label><br>
-                <input type="text" id="name" name="name" style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
-
-                <label for="card-number" style="color: black; font-size: 12px;">Card Number:</label><br>
-                <input type="text" id="card-number" name="card-number"
-                    style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
-
-                <label for="expiry" style="color: black; font-size: 12px;">Expiration Date:</label><br>
-                <input type="text" id="expiry" name="expiry" placeholder="MM/YY what the fuck is this"
-                    style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
-
-                <label for="cvv" style="color: black; font-size: 12px;">CVV this is the stupid mf word for the back numbers:</label><br>
-                <input type="text" id="cvv" name="cvv" style="width: 100%; margin-bottom: 1rem; font-size: 12px;"><br>
-
-                <button type="button"
-                    style="background: black; color: yellow; font-size: 12px; padding: 0.5rem; border: 2px solid yellow; cursor: pointer;"
-                    onclick="triggerExplosion()">
-                    Submit Payment
-                </button>
-
-                <hr>
-                <p>Also make donation via:</p>
-                <div onclick="triggerExplosion()">
-                    <img src="./images.png" style="width: 25%; height: auto;">
-                </div>
-            </div>
-
-        </div>
 
 
+    <h1>WELCOME TO KAKKOI'S WICKED WEBSITE</h1>
 
+
+    <div style="text-align: center; font-size: 0.8em;">
+        You are visitor number:
+        <img src="https://www.free-website-hit-counters.com/c.php?d=9&id=139181&s=5" alt="Visitor Counter">
     </div>
 
+    <table cellpadding="10" cellspacing="5">
+        <tr>
+            <td bgcolor="#00ffff">
+                <h2 style="color: red; text-shadow: 2px 2px 0px black; font-size: 2em; text-align:center;">Donation Payment Form</h2>
+                <div style="background: linear-gradient(to right, #ff00ff, #00ffff); padding: 1rem; border: 3px solid black; width: 300px; margin: auto;">
+                    <label for="amount">Donation Amount (it better be a lot!):</label><br>
+                    <input type="text" id="amount" name="amount" style="width: 100%; margin-bottom: 1rem;"><br>
+
+                    <label for="name">Name on Card:</label><br>
+                    <input type="text" id="name" name="name" style="width: 100%; margin-bottom: 1rem;"><br>
+
+                    <label for="card-number">Card Number:</label><br>
+                    <input type="text" id="card-number" name="card-number" style="width: 100%; margin-bottom: 1rem;"><br>
+
+                    <label for="expiry">Expiration Date:</label><br>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY wtf is this"
+                        style="width: 100%; margin-bottom: 1rem;"><br>
+
+                    <label for="cvv">CVV (3 digits on the back):</label><br>
+                    <input type="text" id="cvv" name="cvv" style="width: 100%; margin-bottom: 1rem;"><br>
+
+                    <button type="button" onclick="triggerExplosion()"
+                        style="background: black; color: yellow; font-size: 14px; padding: 0.5rem; border: 2px solid yellow; cursor: pointer;">
+                        Submit Payment
+                    </button><br><br>
+
+                    <p>Or donate via:</p>
+                    <div onclick="triggerExplosion()">
+                        <img src="./images.png" style="width: 100px;">
+             </div>
+                </div>
+            </td>
+        </tr>
+    </table>
     <marquee style="color: yellow; background: black; font-size: 1.5em;">Welcome to Kakkoi's Wicked Website! Feel free to lounge around and relax with my cool graphic effects! And! Feel free to donate to yours truly! (Donations resulting in less than 5 dollars will be shot on sight. The dollars themselves will be shot. My financial advisor said it wasn't a good idea to be shooting cash but why tf not it's 3 bucks that shit is worthless that guy also tried to steal my money because he needed to do an expensive dental procedure cause his teeth were so fucked up like going left and right fuckin throwing gang signs n shit so after hearing his plight I sent him to my personal dentist in Albania nah jk lol we shot that broke ass bitch but yeah donate to meeeeeee :3</marquee>
 
     <script>
